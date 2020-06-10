@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新闻</title>
+<script src="jquery-1.3.1.min"></script>
+<script>
+</script>
+<script type = "text/javascript">
+function scroll_news(){
+    var firstNode = $('#scroll-container li'); 
+    firstNode.eq(0).fadeOut('slow',function(){ 
+     $(this).clone().appendTo($(this).parent()).show('slow');
+     $(this).remove();
+  });
+}
+setInterval('scroll_news()',1000);
+</script>
+</head>
+<body onload="">
+<div id="scroll-container" style="height: 18px;width:200px; background-color: #99CCFF; overflow: hidden;">
+  <li>1. 美拟重启武汉总领馆</li>
+  <li>2. 巴西新增逾3.2万例</li>
+  <li>3. 弗洛伊德葬礼举行</li>
+  <li>4. 31省新增确诊3例</li>
+  <li>5. 医学博士受试疫苗</li>
+  <li>6. 乡镇干部踢翻水果摊</li>
+  <li>7. 四川遛街熊猫真相</li>
+  <li>8. 李楠亮相江苏男篮</li>
+  <li>9. 王中军卖香港豪宅</li>
+  <li>10. 李佳琦研究生团队</li>
+</div>
+</body>
+</html>
