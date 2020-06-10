@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>发布框</title>
+	<style>
+	
+	</style>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <script>
+        $(function () {
+		    var maxLength = $("strong").text();
+		    $("textarea").keyup(function(){
+			var l = $(this).val().length;
+		    $("strong").text(maxLength - l);
+			if(parseInt($("strong").text()) < 0){
+			  $("strong").text("0");
+			  var val = $(this).val().substring(0,140);
+			  $(this).val(val);
+				}
+			});
+        });
+    </script>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <span>您还可以输入<strong style="color:red">150</strong>个字</span>
+</body>
+</html>
